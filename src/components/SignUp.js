@@ -89,24 +89,26 @@ const SignUp = ()=>{
             <input className={borderEmail} type="email" placeholder="Enter email" onChange={validateEmail}/>
             {
                 !isEmail&&(
-                    <p color="red">Enter correct email!</p>
+                    <p style={{color:"red"}}>Enter correct email!</p>
                 )
             }
             <h5>Password:</h5>
             <input className={borderPassword} type="password" placeholder="Enter password" onChange={validatePassword}/>
             {
                 !isPassword&&(
-                    <p color="red">Enter correct password!</p>
+                    <p style={{color:"red"}}>Enter correct password!</p>
                 )
             }
             <h5>Confirm Password:</h5>
             <input className={borderConfirmPassword} type="password" placeholder="Confirm Password" onChange={validateConfirmPassword}/>
             {
                 !isConfirmPassword&&(
-                    <p color="red">Password doesnot Match!</p>
+                    <p style={{color:"red"}}>Password doesnot Match!</p>
                 )
             }
+            <div>
             <button onClick={handleClick}>Signup</button>
+            </div>
 
         </div>
     )
