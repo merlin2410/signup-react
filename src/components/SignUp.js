@@ -23,7 +23,7 @@ const SignUp = ()=>{
         console.log(emailRegex.test(email));
 
         //Check whether valid email
-        if(emailRegex.test(email)){
+        if(emailRegex.test(e.target.value)){
             setIsEmail(true);
             setBorderEmail("green");
         }
@@ -39,7 +39,7 @@ const SignUp = ()=>{
         
 
         //Check whether valid password
-        if(passwordRegex.test(password)){
+        if(passwordRegex.test(e.target.value)){
             setIsPassword(true);
             setBorderPassword("green");
         }
@@ -54,9 +54,9 @@ const SignUp = ()=>{
         setConfirmPassword(e.target.value);
         
         console.log("Inside",password,confirmPassword)
-        console.log(password===confirmPassword);
+        console.log(password===e.target.value);
         //Check whether password and confirm password equal
-        if(password===confirmPassword){
+        if(password===e.target.value){
             setIsConfirmPassword(true);
             setBorderConfirmPassword("green");
         }
